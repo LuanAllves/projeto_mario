@@ -2,17 +2,22 @@ const botaoTrailer = document.querySelector(".botao-trailer");
 const modal = document.querySelector(".modal");
 const trailer = document.getElementById("video");
 const linkDoVideo = video.src;
+const botaoFechaTrailer = document.querySelector(".fechar-modal");
+
+function AlterarModal() {
+    modal.classList.toggle("aberto")
+}
 
 botaoTrailer.addEventListener("click", () => {
-    modal.classList.add("aberto")
+    AlterarModal();
     video.setAttribute("src", linkDoVideo)
 })
 
 
-const botaoFechaTrailer = document.querySelector(".fechar-modal");
+
 
 botaoFechaTrailer.addEventListener("click", () => {
-    modal.classList.remove("aberto")
+    AlterarModal();
     video.setAttribute("src", "")
 })
 
