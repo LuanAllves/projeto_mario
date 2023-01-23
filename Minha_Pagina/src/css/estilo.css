@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(0, #00ced1, white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+
+.img-perfil{
+    width: 90%;
+    height: 100px;
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-perfil img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+main .social-links ul{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .social-links ul li{
+    padding: 10px;
+}
+
+.social-links button{
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    border: solid .3px black;
+    border-radius: 10px;
+    background: none;
+    cursor: pointer;
+
+}
+
+main .social-links ul li button:hover{
+    transition: .3s;
+    background: whitesmoke;
+    opacity: .5;
+}
+
+.social-icones ul{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.social-icones img{
+    width: 20px;
+    height: 20px;
+}
+
+/*Modo noturno*/
+
+body.dark{
+    background: linear-gradient(0, #120a8f, #00ced1);
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+
+    transform: scale(1.5);
+}
+
+.label .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(24px);
+}
+
+.fa-moon {
+    color: #f1c40f
+}
+
+.fa-sun{
+    color: #f39c12;
+}
